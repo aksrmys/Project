@@ -1,0 +1,51 @@
+body main {
+  background-image: url("https://aybu.edu.tr/GetFile?id=25a45efe-844a-43f4-a5d0-fde48d2b4d2a.png");
+  /* This image is background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.475);
+  background-blend-mode: overlay;
+}
+
+body main .content {
+  position: absolute;
+  width: 1280px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+body main .content .texts {
+  text-align: center;
+  height: 250px;
+  background-color: #ffffff;
+  padding: 15px 40px;
+}
+
+
+body main .content .texts div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+body main .content .texts p {
+  text-align: left;
+  margin: 20px 30px;
+}
+
+body main .content .texts img {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 150px;
+}
+
+body main .content h3 {
+  font-size: 2rem;
+  margin: 30px;
+  text-align: center;
+  background-color: #F878DA;
+}

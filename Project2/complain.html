@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain</title>
+    <link rel="stylesheet" href="src/css/complain.css">
+    <link rel="stylesheet" href="src/css/component.css">
+</head>
+
+<body>
+    <header>
+        <!--  I use container for align the items center of the page -->
+        <div class="container">
+            <!-- Navbar part -->
+            <nav>
+                <div class="left-area">
+                    <a href="index.html">Home</a>
+                    <a href="complain.html">Complain</a>
+                    <a href="feedbacks.html">Feedbacks</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="right-area">
+                    <img src="src/img/logobeyaz.png" alt="logo">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Main part -->
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Fill the form.</h1>
+
+                <div class="card">
+                    <form>
+                        <div>
+                            <label for="fname">Anonymous name:</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            <h4>What subjects are you complaining about Aybu?</h4>
+                            <div class="section">
+
+                                <div>
+                                    <input type="checkbox" id="education" name="subjects">
+                                    <label for="education">Education</label><br>
+
+                                    <input type="checkbox" id="transport" name="subjects">
+                                    <label for="transport">Transport</label><br>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="meals" name="subjects">
+                                    <label for="meals">Meals</label><br>
+
+                                    <input type="checkbox" id="social-areas" name="subjects">
+                                    <label for="social-areas">Social Areas</label><br>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="building" name="subjects">
+                                    <label for="building">Building</label><br>
+
+                                    <input type="checkbox" id="canteen" name="subjects">
+                                    <label for="canteen">Canteen</label><br>
+
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="campus" name="subjects">
+                                    <label for="campus">Campus</label><br>
+
+                                    <input type="checkbox" id="students" name="subjects">
+                                    <label for="students">Students</label><br>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" id="managers" name="subjects">
+                                    <label for="managers">Managers</label><br>
+
+                                    <input type="checkbox" id="everything-else" name="subjects">
+                                    <label for="everything-else">Everything Else</label><br>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="upload-section">
+                            <label for="photo-upload">Upload Photo About Your Complain:</label>
+                            <input type="file" id="photo-upload">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="complaintext">Write here your message:</label><br>
+                            <textarea id="complaintext" name="complaintext" cols="15" rows="10"></textarea>
+                            <input class="button pink" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer part -->
+    <footer>
+        <div class="container">
+            <div class="content">
+
+                <div>
+                    <img src="src/img/logokoyu.png" alt="footer-logo">
+                    <p>Thanks for your complaint.</p>
+                </div>
+                <div class="contact">
+                    <h1>Contact Us</h1>
+                    <a href="https://www.instagram.com/ybuankara/">
+                        <img src="src/img/instagram.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/ybuankara/">
+                        <img src="src/img/twitter.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/ybuankara/">
+                        <img src="src/img/facebook.png" alt="">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
