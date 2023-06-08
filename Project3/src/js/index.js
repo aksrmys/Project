@@ -2,24 +2,24 @@ $(document).ready(function() {
     $("#boxes a").click(function(event) {
       event.preventDefault(); 
   
-      var speakerTitle = $(this).attr("title");
+      var optionTitle = $(this).attr("title");
       
       // Build the name of the JSON file based on the speaker's title
-      var jsonFileName = "src/json_files/" + speakerTitle + ".json";
+      var jsonFileName = "src/json_files/" + optionTitle + ".json";
       
       // Clear the elements 
       $("#suggest").empty();
   
       // Retrieve the JSON data for the speaker
       $.getJSON(jsonFileName, function(data) {
-        var speaker = data.options[0]; 
-        var speakerHtml = '<h1>' + speaker.title + '</h1>';
-        speakerHtml += '<img src="' + speaker.image + '">';
-        speakerHtml += '<h2>' + speaker.speaker + '</h2>';
-        speakerHtml += '<p>' + speaker.text + '</p>';
+        var option = data.options[0]; 
+        var optionHtml = '<h1>' + option.title + '</h1>';
+        optionHtml += '<img src="' + option.image + '">';
+        optionHtml += '<h2>' + option.speaker + '</h2>';
+        optionHtml += '<p>' + option.text + '</p>';
   
         // Append the speaker HTML elements 
-        $("suggest").append(speakerHtml);
+        $("suggest").append(optionHtml);
       });
     });
   });
