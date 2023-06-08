@@ -1,7 +1,7 @@
     // Function to make an AJAX request to the education.json file and update the education options
     function loadEducationOptions() {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/Users/rumeysaakis/Downloads/Project1 2/src/json_files/education.json', true);
+        xhr.open('GET', '/src/json_files/education.json', true);
 
         xhr.onload = function() {
             if (xhr.status == 200) {
