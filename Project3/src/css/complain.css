@@ -1,0 +1,52 @@
+.content {
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+.section{
+  display: flex;
+}
+.section div{
+  margin: 10px 70px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.upload-section {
+  margin-top: 20px;
+}
+
+#uploaded-photo {
+  display: block;
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.button {
+  padding: 10px
+}
