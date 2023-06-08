@@ -1,38 +1,73 @@
-    // Function to make an AJAX request to the education.json file and update the education options
-    function loadEducationOptions() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/src/json_files/education.json', true);
+// Function to clear the main element
+function clearMain() {
+    var main = document.querySelector('main');
+    main.innerHTML = '';
+}
 
-        xhr.onload = function() {
-            if (xhr.status == 200) {
-                var response = JSON.parse(xhr.responseText);
-                var options = response.options;
+// Function to create HTML elements for the speaker data
+function createSpeakerElements(data) {
+    var main = document.querySelector('main');
 
-                var educationBoxes = document.getElementById('education-boxes');
-                educationBoxes.innerHTML = '';
+    // Create container div
+    var container = document.createElement('div');
+    container.classList.add('container');
+    main.appendChild(container);
 
-                options.forEach(function(option) {
-                    var box = document.createElement('div');
-                    box.className = 'box';
-                    box.textContent = option.title;
+    // Create content div
+    var content = document.createElement('div');
+    content.classList.add('content');
+    container.appendChild(content);
 
-                    box.addEventListener('click', function() {
-                        document.querySelector('.suggest h1').textContent = option.title;
-                        document.querySelector('.suggest img').src = option.image;
-                        document.querySelector('.suggest h2').textContent = option.name;
-                        document.querySelector('.suggest p').textContent = option.text;
-                    });
+    // Create title
+    var title = document.createElement('h1');
+    title.textContent = data.title;
+    content.appendChild(title);
 
-                    educationBoxes.appendChild(box);
-                });
-            }
-        };
+    // Create image
+    var image = document.createElement('img');
+    image.src = data.image;
+    content.appendChild(image);
 
-        xhr.send();
-    }
+    // Create name
+    var name = document.createElement('h2');
+    name.textContent = data.name;
+    content.appendChild(name);
 
-    // Load education options on page load
-    document.addEventListener('DOMContentLoaded', function() {
-        loadEducationOptions();
-    });
+    // Create text
+    var text = document.createElement('p');
+    text.textContent = data.text;
+    content.appendChild(text);
+}
 
+// Click event handler for sidebar links
+function linkClickHandler(event) {
+    event.preventDefault();
+
+    var link = event.target;
+    var fileName = link.getAttribute('href');
+
+    // Remove the '#' character from the filename
+    fileName = fileName.slice(1) + '.json';
+
+    // Retrieve the data from the JSON file
+    fetch(fileName)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            // Clear the main element
+            clearMain();
+
+            // Create HTML elements for the speaker data
+            createSpeakerElements(data.options[0]);
+        })
+        .catch(function(error) {
+            console.log('Error:', error);
+        });
+}
+
+// Add click event listeners to sidebar links
+var links = document.querySelectorAll('.left-area a');
+links.forEach(function(link) {
+    link.addEventListener('click', linkClickHandler);
+});
