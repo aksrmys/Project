@@ -12,10 +12,10 @@ $(document).ready(function() {
   
       // Retrieve the JSON data for the speaker
       $.getJSON(jsonFileName, function(data) {
-        var speaker = data.speakers[0]; 
+        var speaker = data.options[0]; 
         var speakerHtml = '<h1>' + speaker.title + '</h1>';
         speakerHtml += '<img src="' + speaker.image + '">';
-        speakerHtml += '<h2>' + speaker.month + '<br>' + speaker.speaker + '</h2>';
+        speakerHtml += '<h2>' + speaker.speaker + '</h2>';
         speakerHtml += '<p>' + speaker.text + '</p>';
   
         // Append the speaker HTML elements 
