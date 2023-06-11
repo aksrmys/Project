@@ -5,7 +5,7 @@ $(document).ready(function() {
       var optionTitle = $(this).attr("title");
       
       // Build the name of the JSON file based on the speaker's title
-      var jsonFileName = optionTitle + ".json";
+      var jsonFileName ="Project3/src/js/" optionTitle + ".json";
       
       // Clear the elements 
       $("#suggest").empty();
