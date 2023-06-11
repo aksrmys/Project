@@ -5,7 +5,7 @@ $(document).ready(function() {
       var optionTitle = $(this).attr("title");
       
       // Build the name of the JSON file based on the speaker's title
-      var jsonFileName = "src/json_files/" + optionTitle + ".json";
+      var jsonFileName = "../src/json_files/" + optionTitle + ".json";
       
       // Clear the elements 
       $("#suggest").empty();
@@ -19,7 +19,7 @@ $(document).ready(function() {
         optionHtml += '<p>' + option.text + '</p>';
   
         // Append the speaker HTML elements 
-        $("suggest").append(optionHtml);
+        $("#suggest").append(optionHtml);
       });
     });
   });
