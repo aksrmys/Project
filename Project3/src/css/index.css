@@ -1,0 +1,90 @@
+body main {
+  background-image: url("https://aybu.edu.tr/GetFile?id=25a45efe-844a-43f4-a5d0-fde48d2b4d2a.png");
+  /* This image is background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.475);
+  background-blend-mode: overlay;
+  
+}
+
+body main .content {
+  position: absolute;
+  width: 1280px;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+body main .content .boxes {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+body main .content .suggest {
+  width: 1130px;
+  opacity: 0.7;
+  margin: 50px;
+  height: 300px;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  clear: left;
+  padding: 0 20px 20px;
+  float: right;
+
+}
+
+body main .content .suggest h1 {
+  color: #F878DA;
+  font-size: 150%;
+  padding: .5em 0 .25em;
+}
+
+body main .content .suggest h2 {
+  font-size: 120%;
+  padding-bottom: .25em;
+}
+
+body main .content .suggest p {
+  padding-bottom: .5em;
+}
+
+body main .content .suggest blockquote {
+  padding: 0 2em;
+  font-style: italic;
+}
+
+body main .content .suggest img {
+  float: right;
+  margin: 1em 0 1em 1em;
+  border: 1px solid black;
+  height: 200px;
+}
+
+body main .content .boxes .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 45px;
+  padding: 15px 30px;
+  border-radius: 7px;
+  background-color: rgb(209, 208, 208);
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  box-shadow: 5px 10px 20px #f878da6c;
+  margin: 0px 10px;
+}
+
+body main .content h3 {
+  font-size: 2rem;
+  margin: 30px;
+  text-align: center;
+}
