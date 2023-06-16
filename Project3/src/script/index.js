@@ -5,7 +5,7 @@ $(document).ready(function() {
       var optionTitle = $(this).attr("title");
       
       // Build the name of the JSON file based on json file name
-      var jsonFileName = "src/json_files/" + optionTitle + ".json";
+      var jsonFileName = "../src/json_files/" + optionTitle + ".json";
       
       // Clear the elements 
       $("#suggest").empty();
